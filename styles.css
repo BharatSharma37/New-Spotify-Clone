@@ -1,0 +1,258 @@
+* {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #121212;
+    color: white;
+}
+
+.main-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 240px;
+    height: 100vh;
+    background-color: #000000;
+    padding: 24px;
+    position: fixed;
+    overflow-y: auto;
+}
+
+.sidebar .logo img {
+    width: 130px;
+    margin-bottom: 24px;
+}
+
+.sidebar .navigation ul {
+    list-style: none;
+    margin: 20px 0;
+}
+
+.sidebar .navigation ul li a {
+    color: #b3b3b3;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    padding: 8px 0;
+    transition: color 0.3s ease;
+}
+
+.sidebar .navigation ul li a span:first-child {
+    margin-right: 16px;
+    font-size: 20px;
+}
+
+.sidebar .navigation ul li a:hover {
+    color: white;
+}
+
+.sidebar .policies {
+    position: absolute;
+    bottom: 30px;
+}
+
+.sidebar .policies ul {
+    list-style: none;
+}
+
+.sidebar .policies ul li {
+    margin-bottom: 8px;
+}
+
+.sidebar .policies ul li a {
+    color: #b3b3b3;
+    text-decoration: none;
+    font-size: 10px;
+    font-weight: 500;
+}
+
+.sidebar .policies ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Main Content Styles */
+.main-content {
+    margin-left: 240px;
+    width: calc(100% - 240px);
+    background-color: #121212;
+    min-height: 100vh;
+}
+
+/* Topbar Styles */
+.topbar {
+    background-color: #121212;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 32px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.pre-next-buttons button {
+    color: #7a7a7a;
+    cursor: not-allowed;
+    width: 34px;
+    height: 34px;
+    border-radius: 100%;
+    font-size: 18px;
+    border: 0;
+    background-color: #090909;
+    margin-right: 10px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    margin-right: 32px;
+}
+
+.login-btn {
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 32px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.login-btn:hover {
+    transform: scale(1.05);
+}
+
+/* Playlist Styles */
+.spotify-playlists {
+    padding: 20px 40px;
+}
+
+.spotify-playlists h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.spotify-playlists .list {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.spotify-playlists .list .item {
+    min-width: 140px;
+    width: 140px;
+    padding: 15px;
+    background-color: #181818;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.spotify-playlists .list .item:hover {
+    background-color: #282828;
+    transform: scale(1.05);
+}
+
+.spotify-playlists .list .item img {
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    aspect-ratio: 1;
+    object-fit: cover;
+}
+
+.spotify-playlists .list .item h4 {
+    font-size: 14px;
+    margin-bottom: 6px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.spotify-playlists .list .item p {
+    font-size: 12px;
+    color: #b3b3b3;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.spotify-playlists .list .item .play {
+    position: absolute;
+    right: 10px;
+    bottom: 70px;
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+.spotify-playlists .list .item:hover .play {
+    opacity: 1;
+    transform: translateY(-10px);
+}
+
+.spotify-playlists .list .item .play .fa {
+    background-color: #1db954;
+    border-radius: 100%;
+    padding: 10px;
+    font-size: 14px;
+}
+.preview {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to right, #ae2896, #509bf5);
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.preview h6 {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.preview p {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.preview button {
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 14px 30px;
+    border: 0px;
+    border-radius: 40px;
+    cursor: pointer;
+}
